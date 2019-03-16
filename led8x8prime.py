@@ -12,12 +12,13 @@ PRIMES = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67
           151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229,
           233, 239, 241, 251]
 
-class PrimeDisplay:
+class Led8x8Prime:
     """ Prime numbers less than 256 display on an 8x8 matrix """
 
     def __init__(self, matrix8x8, lock):
         """ create the prime object """
         self.matrix = matrix8x8
+        self.matrix.begin()
         self.bus_lock = lock
         self.index = 0
         self.row = 0
